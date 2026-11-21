@@ -48,7 +48,7 @@ export default {
           return await frame.evaluate(() => {
             const buttons = Array.from(document.querySelectorAll('button, a[role="button"]'));
             const target = buttons.find(el =>
-              /alle akzeptieren|zustimmen|einverstanden|akzeptieren|ablehnen|accept|accept all/i.test(el.innerText || '')
+              /alle akzeptieren|alle cookies erlauben|alle erlauben|zustimmen|einverstanden|akzeptieren|ablehnen|accept|accept all/i.test(el.innerText || '')
             );
             if (target) {
               target.click();
